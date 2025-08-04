@@ -1,53 +1,35 @@
-# nmap-port-scan-task
-Cybersecurity internship task for port scanning.
+# Port Scanning Task - Cyber Security Internship
 
-# 🔍 Cyber Security Internship Task 1 - Port Scanning
+## Objective:
+Scanned my local network to identify active devices and their open ports using Zenmap (Nmap GUI).
 
-##  Objective
-Perform a port scan on the local network to identify open ports and understand basic network exposure using Nmap.
-
----
-
-##  Tools Used
-- Zenmap (Nmap GUI)
-- Windows 10
+## Tools:
+- Zenmap
+- Windows Command Prompt (for IP check)
 - GitHub
 
----
-
-## Steps Followed
-1. Identified local network IP range using `ipconfig`
-2. Opened Zenmap and scanned target: `192.168.56.1/24`
+## What I Did:
+1. Found my IP range using `ipconfig` (got 192.168.56.X)
+2. Opened Zenmap and scanned the range `192.168.56.1/24`
 3. Selected "Intense Scan" profile
-4. Waited for scan to complete
-5. Saved scan result as `scan_results.txt`
-6. Uploaded result + screenshot to GitHub
+4. Waited for the scan to complete
+5. Saved the results as a `.txt` file
+6. Took a screenshot of the result
+7. Uploaded everything here
 
----
+## Summary:
+One active host found at 192.168.56.1  
+Open ports:
+- 135 (MSRPC)
+- 139 (NetBIOS)
+- 445 (SMB)
 
-##  Scan Summary
-- Active Host: 192.168.56.1
-- Open Ports:
-  - 135/tcp – msrpc
-  - 139/tcp – netbios-ssn
-  - 445/tcp – microsoft-ds
+These are commonly used for Windows services. If left unprotected, they can be misused in a network attack.
 
----
+## Files Included:
+- `scan_results.txt` - Text output from the scan
+- `nmap_screenshot.png` - Screenshot from Zenmap
+- `README.md` - This file
 
-##  Security Insights
-- These ports are related to Windows file sharing (SMB)
-- If not secured, they can expose system to attacks (like WannaCry)
-- Firewalls and port blocking help reduce risk
-
----
-
-##  Files in this Repo
-- `scan_results.txt` → Actual Nmap scan output
-- `nmap_screenshot.png` → Screenshot from Zenmap (optional)
-
----
-
-##  Task Outcome
-✔ Understood basic port scanning  
-✔ Learned about open port risks  
-✔ Successfully completed and submitted the task
+## Conclusion:
+This task helped me understand how port scanning works and how to detect exposed services on a network.
